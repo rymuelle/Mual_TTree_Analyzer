@@ -7,6 +7,8 @@
 #include <vector>
 #include <TCanvas.h>
 #include <iostream>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 class chamberPlots
 {
@@ -16,6 +18,7 @@ class chamberPlots
     int targetSector;
     char prefix[128];
     TH1F * TH1F_res_x_test;
+    TProfile * TProfile_res_x_track_x;
     chamberPlots(int l_targetWheel, int l_targetStation, int l_targetSector);
     void drawHisto();
 };
@@ -67,6 +70,11 @@ Float_t angle_x;
 Float_t angle_y;
 Float_t pz;
 Float_t pt;
+
+Float_t track_x;
+Float_t track_y;
+Float_t track_angle_x;
+Float_t track_angle_y;
 
 TCanvas * myCanvas;
 TH1F * TH1F_res_x; 

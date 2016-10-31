@@ -11,8 +11,22 @@ int mual_ttree_analyzer_main()
     //v_histograms.push_back(chamberPlots(0,4,14));    
     //v_histograms.push_back(chamberPlots(0,4,1));    
     
-   for ( int i = 0; i < 10000; i++) //analyzer.nEntries; i++)
+//        analyzer.myTTree->GetEntry(100)
+//        analyzer.fillChamberPlots(chamber14);
+//        analyzer.myTTree->GetEntry(1000);
+//        analyzer.fillChamberPlots(chamber14);
+//        analyzer.myTTree->GetEntry(10000);
+//        analyzer.fillChamberPlots(chamber14);
+//        analyzer.myTTree->GetEntry(1000000000);
+//        analyzer.fillChamberPlots(chamber14);
+//        analyzer.myTTree->GetEntry(10000000000);
+//        analyzer.fillChamberPlots(chamber14);
+//        analyzer.myTTree->GetEntry(100000000000);
+//        analyzer.fillChamberPlots(chamber14);
+   for ( int i = 0; i<  1000; i++) //analyzer.nEntries; i++)
+   //for ( int i = 0; analyzer.nEntries; i++)
    {
+        std::cout << i << std::endl;
         analyzer.myTTree->GetEntry(i);
         //analyzer.fillHisto();
         analyzer.fillChamberPlots(chamber14);
